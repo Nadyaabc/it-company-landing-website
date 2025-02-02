@@ -1,0 +1,270 @@
+* {
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+  }
+  header,
+
+  footer {
+    max-width: 1288px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+main{
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+  header {
+    max-width: 1288px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 14px;
+  }
+  
+  header .logo img {
+    margin-right: 10px;
+    margin-top: 19px;
+    width: 285px;
+    height: 72px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 608px;
+    gap: 32px;
+    padding: 0px;
+    margin-top: 25px;
+  }
+  
+  nav ul li a {
+    margin-right: 32px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  nav ul li a:last-child {
+    margin-right: 0;
+  }
+  
+  #current-page {
+    font-weight: bold;
+    color: #3980ff;
+  }
+  
+  .contacts {
+    margin-right: 0px;
+    margin-top: 18px;
+  }
+  
+  .contacts p {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    align-items: start;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 11px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+  
+  .social-media img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  /* main*/
+.container{
+    background-color: #fef4ff;
+    border-radius: 27px;
+}
+.main-container h1{
+    font-size: 55px;
+    max-height: 114px;
+    max-width: 702px;
+    font-weight: bold;
+    margin:79px auto auto auto;
+text-align: center;
+}
+.main-container h3{
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+.pricing-grid {
+    max-width: 1350px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 57px;
+    box-sizing: border-box;
+    
+}
+.pricing-card{
+    
+    max-width: 421px;
+    width: 100%;
+    height: 505px;
+    background-color: #fff;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+
+.card-content {
+    margin: auto auto;
+  }
+.heading {
+    display: flex;
+    align-items:flex-end; /* Центрируем иконку и заголовок по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+
+.heading img {
+    width: 37px; /* Ширина иконки */
+    height: 51px; /* Высота иконки */
+    margin-right: 25px; /* Отступ между иконкой и заголовком */
+}
+.heading h2{
+    margin: 0; /* Убираем отступы */
+    font-size: 24px; /* Размер шрифта заголовка */
+    color: #000; /* Цвет текста */
+}
+
+.card-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    min-width: 281px;
+    width: 100%;
+}
+.card-content ul li{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+.card-content ul li span, .card-content ul li img{
+    
+    margin: 8.5px 0; /* Отступы между элементами списка */
+    font-size: 16px; /* Размер шрифта для списка */
+    color: #000; /* Цвет текста */
+}
+.card-content ul li img{
+    width: 21px;
+    height: 21px;
+}
+h2.cost {
+    font-size: 24px; /* Размер шрифта для цены */
+    font-weight: bold; /* Жирный текст */
+    margin: 41px 0 18px 0; /* Отступы сверху и снизу */
+    text-align: center;
+}
+
+.order {
+    background-color: white; /* Цвет кнопки */
+    color: #3980ff; /* Цвет текста кнопки */
+    border: 1px solid #3980ff; /* Без рамки */
+    border-radius:10px  ; /* Закругленные углы */
+    width: 100%; /* Ширина кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 16px; /* Размер шрифта кнопки */
+    text-align: center;
+    min-height: 73px;
+    min-width: 278;
+    padding: auto;
+
+}
+
+.order:hover {
+    background-color: #3980ff; /* Цвет кнопки */
+}
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+    max-width: 1175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 111px;
+  
+    margin: 98px 265px 45px 353px;
+  }
+  
+  footer .logo img {
+    margin-right: 70px;
+    margin-left: 200px;
+    width: 285px;
+    height: 72px;
+  }
+  
+  footer nav {
+    margin: 0;
+    max-width: 172px;
+  }
+  
+  footer nav ul {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    flex-direction: column;
+    padding: 0px;
+  }
+  
+  footer nav ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0;
+    line-height: 145%;
+  }
+  
+  footer .contacts {
+    margin-top: 12px;
+    margin-right: 20px;
+  }
+  
+  footer .contacts p {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+    align-items: start;
+  }
+  
+  footer .social-media {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  

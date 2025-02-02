@@ -80,6 +80,10 @@ nav ul li a:last-child {
 }
 
 /* main*/
+.container{
+  background-color: #fef4ff;
+  border-radius: 27px;
+}
 .main-container {
   margin: 0 auto;
   display: flex;
@@ -150,8 +154,6 @@ nav ul li a:last-child {
   display: flex;
   flex-direction: column;
   gap: 35px;
-}
-.form-container {
 }
 
 .form-group {
