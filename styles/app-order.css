@@ -1,0 +1,265 @@
+* {
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+}
+header,
+main,
+footer {
+  max-width: 1288px;
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  max-width: 1288px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 14px;
+}
+
+header .logo img {
+  margin-right: 10px;
+  margin-top: 19px;
+  width: 285px;
+  height: 72px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  max-width: 608px;
+  gap: 32px;
+  padding: 0px;
+  margin-top: 25px;
+}
+
+nav ul li a {
+  margin-right: 32px;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav ul li a:last-child {
+  margin-right: 0;
+}
+
+#current-page {
+  font-weight: bold;
+  color: #3980ff;
+}
+
+.contacts {
+  margin-right: 0px;
+  margin-top: 18px;
+}
+
+.contacts p {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  align-items: start;
+}
+
+.social-media {
+  display: flex;
+  gap: 11px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 18px;
+}
+
+.social-media img {
+  width: 48px;
+  height: 48px;
+}
+
+/* main*/
+.main-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+  margin-top: 110px;
+}
+.main-container h1 {
+  font-size: 55px;
+  font-weight: 300px;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 86px;
+}
+.budget h2,
+.contact-data h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+  line-height: 128%;
+}
+.budget {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px; 
+  grid-row-gap: 20px;    
+}
+
+.box {
+  border: 1px solid #3980ff;
+  border-radius: 93px;
+
+  width: 315px;
+  height: 106px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+.box p {
+  margin: auto auto;
+  font-weight: bold;
+}
+
+.box:hover {
+  background-color: #3980ff; /* Цвет выделенного блока */
+  color: white; /* Цвет текста выделенного блока */
+}
+
+/*контакты*/
+.contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.form-container {
+}
+
+.form-group {
+  margin-bottom: 9.5px; 
+  width: 471px;
+}
+input[type="text"] {
+  height: 64px;
+}
+textarea {
+  height: 202px; 
+  padding-top: 22px;
+  overflow: hidden;
+}
+
+input[type="text"],
+textarea {
+  width: 100%; 
+  outline: none;
+  padding-left: 34px;
+  border: 1px solid #acacac; 
+  border-radius: 10px; 
+  color: #acacac;
+  box-sizing: border-box;
+  resize: none;
+}
+
+button {
+  margin-top: 9px;
+  background-color: #3980FF;
+  color: white; 
+  border: none; 
+  border-radius: 10px;
+  padding:auto auto;
+  cursor: pointer; 
+  font-size: 17px; 
+  width: 320px;
+  height: 73px;
+}
+input[type="text"]:hover, textarea:hover,
+input[type="text"]:focus-within, textarea:focus {
+  border: 3px solid #3980FF; /* Цвет рамки при наведении */
+  color: #000;
+  font-weight:300;
+
+}
+
+button:hover {
+  background-color: #0056b3; 
+}
+
+/*footer*/
+footer {
+  max-width: 1175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 111px;
+
+  margin: 98px 265px 45px 353px;
+}
+
+footer .logo img {
+  margin-right: 70px;
+  margin-left: 200px;
+  width: 285px;
+  height: 72px;
+}
+
+footer nav {
+  margin: 0;
+  max-width: 172px;
+}
+
+footer nav ul {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  flex-direction: column;
+  padding: 0px;
+}
+
+footer nav ul li a {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0;
+  line-height: 145%;
+}
+
+footer .contacts {
+  margin-top: 12px;
+  margin-right: 20px;
+}
+
+footer .contacts p {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 7px;
+  align-items: start;
+}
+
+footer .social-media {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}

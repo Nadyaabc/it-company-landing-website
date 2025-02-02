@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/app-order.css" />
+    <link href="../assets/fonts/open-sans/" />
     <title>Document</title>
   </head>
   <body>
@@ -33,6 +36,64 @@
           <img src="../assets/images/svg/telegram-icon.svg" />
         </div>
       </header>
+      <main>
+        <div class="main-container">
+          <h1>Заказать приложение</h1>
+          <section class="main-content">
+            <section class="budget">
+              <h2>Бюджет проекта:</h2>
+              <div class="budget-grid">
+                <div class="box">
+                  <p>680 - 1 700 BYN</p>
+                </div>
+                <div class="box"><p>1 700 - 3 400 BYN</p></div>
+                <div class="box"><p>3 400 - 17 000 BYN</p></div>
+                <div class="box"><p>17 000 - 34 000 BYN</p></div>
+                <div class="box"><p>34 000 - 68 000 BYN</p></div>
+                <div class="box"><p>68 000 - 100 000 BYN</p></div>
+              </div>
+            </section>
+            <section class="contact-data">
+              <h2>Контакты:</h2>
+              <div class="form-container">
+                <div class="form-group">
+                  <input type="text" placeholder="Имя" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Телефон" required />
+                </div>
+                <div class="form-group" >
+                  <textarea placeholder="Комментарий" required></textarea>
+                </div>
+                <button>Заказать обратный звонок</button>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="/pages/index.html">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="/pages/dev-stages.html">Этапы работы</a></li>
+            <li><a href="/pages/pricing.html">Стоимость</a></li>
+            <li><a href="#"  id="current-page">Заказать приложение</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="../assets/images/svg/logo.svg" alt="logo" />
+        </div>
+        <div class="contacts">
+          <p style="opacity: 50%">+375 (17) 318-17-98</p>
+          <p style="opacity: 50%">softerio_tech@gmail.com</p>
+          <p style="opacity: 50%">График работы: пн-пт с 9:00 до 18:00</p>
+        </div>
+        <div class="social-media">
+          <img src="../assets/images/svg/telegram-icon.svg" />
+          <img src="../assets/images/svg/viber-icon.svg" />
+        </div>
+      </footer>
     </div>
   </body>
 </html>
