@@ -9,7 +9,7 @@ header,
 footer {
   width: 100%;
 }
-main{
+main {
   margin: 0 auto;
 }
 
@@ -17,14 +17,14 @@ header {
   max-width: 1288px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   margin-bottom: 14px;
-  
 }
-div .logo{
-  margin:0;
+div .logo {
+  margin: 0;
 }
 
 header .logo img {
@@ -42,7 +42,6 @@ header nav ul {
   gap: 32px;
   padding: 0px;
   margin-top: 25px;
-  
 }
 
 header nav ul li a {
@@ -55,15 +54,17 @@ header nav ul li a {
 
 header nav ul li a:last-child {
   margin-right: 0;
-  
-
 }
 
 #current-page {
   font-weight: bold;
   color: #3980ff;
 }
-
+header div.contacts p#phone strong {
+  font-size: 20px;
+  color: #4386ff;
+  line-height: 150%;
+}
 header .contacts {
   margin-right: 0px;
   margin-top: 18px;
@@ -81,7 +82,7 @@ header .social-media {
   display: flex;
   gap: 11px;
   margin-top: 18px;
-  padding:0;
+  padding: 0;
 }
 
 .social-media img {
@@ -223,17 +224,113 @@ footer .social-media {
   gap: 11px;
 }
 
+/* Для планшетов (от 1024px до 1280px) */
+@media (max-width: 1280px) {
+  header,
+  main,
+  footer {
+    max-width: 90%;
+  }
 
+  header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
 
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav ul {
+    gap: 20px;
+  }
+
+  
+}
+
+/* Для небольших ноутбуков (от 769px до 1023px) */
+@media (max-width: 1023px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #3980ff;
+    max-width: 407px;
+    min-height: 529px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+  }
+
+  footer .logo img {
+    margin: 0;
+    width: auto;
+    height: 52px;
+  }
+
+  footer nav {
+    margin: 10px 0;
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer .contacts {
+    margin-top: 10px; /* Уменьшите отступы */
+  }
+
+  footer .social-media {
+    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+  }
+}
 @media (max-width: 768px) {
   * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-size: 14px;
   }
 
   header {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
@@ -245,7 +342,7 @@ footer .social-media {
   }
 
   header .logo img {
-    width: 200px; 
+    width: 200px;
     height: auto;
   }
 
@@ -253,99 +350,94 @@ footer .social-media {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center; 
-
-
+    justify-content: center;
   }
 
-  header nav ul{
+  header nav ul {
     padding: 5%;
     margin-top: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
   }
   nav ul li a {
-    font-size: 14px; 
+    font-size: 14px;
   }
-  header nav ul li:last-child{
-   text-align: center;
+  header nav ul li:last-child {
+    text-align: center;
   }
-  div .contacts{
-    margin:auto auto;
+  div .contacts {
+    margin: auto auto;
+  }
+  #phone {
+    font-size: 18px;
   }
 
   .title h1 {
-    font-size: 36px; 
+    font-size: 36px;
   }
-div .social-media{
-  margin-top: 0;
-
-}
+  div .social-media {
+    margin-top: 0;
+  }
   .social-media img {
     width: 36px;
     height: auto;
   }
 
   main p {
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .main-container {
-    flex-direction: column; 
+    flex-direction: column;
+    margin: 5%;
   }
 
-  
+  main {
+    margin-top: 0;
+    padding: 5%;
+  }
+  .title {
+    margin-top: 0;
+  }
 
-main{
-  margin-top: 0;
-  padding: 5%;
-}
-.title{
-  margin-top: 0;
-}
-.main-container{
-  margin:5%;
-}
+  div.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: fit-content;
+    height: auto;
+  }
 
-div.block{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  max-height: fit-content;
-
-}
-
-
-
-.block-info{
-  margin: 0;
-  padding: 5%;
-}
-
+  .block-info {
+    margin: 0;
+    padding: 5%;
+  }
+  .block-info p {
+    margin-top: 5%;
+  }
   footer {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     align-items: center;
     height: auto;
-    margin:0;
+    margin: 0;
   }
 
   footer .logo img {
-    margin: 0; /* Уберите отступы для логотипа */
-    width: 100%; /* Сделайте логотип гибким */
-    height: auto; /* Сохраните пропорции */
+    margin: 0;
+    width: auto;
+    height: 52px;
   }
 
   footer nav {
-    margin: 10px 0; 
-   
+    margin: 10px 0;
   }
 
   footer nav ul {
@@ -353,7 +445,73 @@ div.block{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
+  }
+
+  footer .contacts {
+    margin-top: 10px; /* Уменьшите отступы */
+  }
+
+  footer .social-media {
+    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+  }
+}
+
+/* Для телефонов (до 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 174px;
+  }
+  main p {
+    font-size: 14px;
+  }
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .block {
+    padding: 5%;
+  }
+
+  .block-info {
+    font-size: 14px;
+  }
+  .block-info h2 {
+    font-size: 1.7rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+  }
+
+  footer .logo img {
+    margin: 0;
+    width: auto;
+    height: 52px;
+  }
+
+  footer nav {
+    margin: 10px 0;
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
   }
 
   footer .contacts {
