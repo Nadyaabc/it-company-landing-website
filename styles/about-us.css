@@ -1,16 +1,18 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: Open Sans, sans-serif;
   font-size: 16px;
 }
-header,
-main,
-footer {
-  max-width: 1288px;
 
+header,
+footer {
   width: 100%;
-  margin: 0 auto;
-  background-color: #fef4ff;
 }
+main{
+  margin: 0 auto;
+}
+
 header {
   max-width: 1288px;
   display: flex;
@@ -19,6 +21,10 @@ header {
   align-items: center;
   height: 100px;
   margin-bottom: 14px;
+  
+}
+div .logo{
+  margin:0;
 }
 
 header .logo img {
@@ -28,7 +34,7 @@ header .logo img {
   height: 72px;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -36,9 +42,10 @@ nav ul {
   gap: 32px;
   padding: 0px;
   margin-top: 25px;
+  
 }
 
-nav ul li a {
+header nav ul li a {
   margin-right: 32px;
   color: black;
   font-size: 16px;
@@ -46,8 +53,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:last-child {
+header nav ul li a:last-child {
   margin-right: 0;
+  
+
 }
 
 #current-page {
@@ -55,42 +64,52 @@ nav ul li a:last-child {
   color: #3980ff;
 }
 
-.contacts {
+header .contacts {
   margin-right: 0px;
   margin-top: 18px;
 }
 
-.contacts p {
+header .contacts p {
   display: flex;
   flex-direction: column;
   padding: 0px;
-  margin: 0px;
+  margin: 0;
   align-items: start;
 }
 
-.social-media {
+header .social-media {
   display: flex;
   gap: 11px;
-  margin-right: 0px;
-  margin-left: 0px;
   margin-top: 18px;
+  padding:0;
 }
 
 .social-media img {
   width: 48px;
   height: 48px;
 }
-.container{
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
   background-color: #fef4ff;
-  max-height: 1175px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1793px;
+  border-radius: 27px;
+  height: auto;
+  padding: 0;
 }
 main {
   max-width: 1288px;
   width: 100%;
+  margin-top: 0;
 }
 .title {
-  margin-top: 29px;
+  margin-top: 24px;
   padding-top: auto;
   padding-bottom: auto;
   padding-left: 0;
@@ -99,37 +118,33 @@ main {
 .title h1 {
   font-size: 55px;
   font-weight: 300px;
-  line-height: 150%;
   margin: 0;
 }
 main {
-  margin-top: 56px;
+  margin-top: 36px;
 }
 main p {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 20px;
   padding-left: 0;
-  letter-spacing: 2px;
   line-height: 150%;
 }
 .main-container {
   margin-top: 44px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
-}
-
-.main-container {
-  margin-top: 44px;
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
   background-color: #3980ff;
   max-width: 407px;
-  max-height: 598px;
+  min-height: 529px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -137,58 +152,23 @@ main p {
 
 .block-info {
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600px;
   padding: 33px;
+  height: auto;
 }
 
 .block-info h2 {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 43px;
   margin-top: 0;
 }
 
 .block-info p {
-  line-height: 150%;
   letter-spacing: 0;
+  margin-top: 50px;
 }
-/*
-.block{
-    background-color: #3980FF;
-    max-width: 407px;
-    max-height: 598px;
-   width:100%;
-   border-radius: 20px;
-    
-}
-.block-info{
-    color: white;
-    font-size: 20px;
-    font-weight: 600px;
-    
-}
-.block-info h2{
-    margin: 33px auto auto auto;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    
-}
-.block-info p{
-    width:85% ;
-    height: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 150%;
-    margin-top: 43px;
-    letter-spacing: 0;
-    padding:0;
-
-
-}*/
-/*footer*/
 footer {
   max-width: 1175px;
   display: flex;
@@ -196,7 +176,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 111px;
-
   margin: 65px 265px 45px 353px;
 }
 
@@ -213,8 +192,6 @@ footer nav {
 }
 
 footer nav ul {
-  display: flex;
-  gap: 0;
   list-style: none;
   flex-direction: column;
   padding: 0px;
@@ -225,8 +202,6 @@ footer nav ul li a {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
-  padding: 0;
-  line-height: 145%;
 }
 
 footer .contacts {
@@ -243,8 +218,149 @@ footer .contacts p {
 }
 
 footer .social-media {
-  margin-top: 0px;
   display: flex;
   flex-direction: column;
   gap: 11px;
+}
+
+
+
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box; 
+    font-size: 14px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .contacts {
+    margin: 10px auto;
+  }
+
+  header .logo img {
+    width: 200px; 
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; 
+
+
+  }
+
+  header nav ul{
+    padding: 5%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; 
+  }
+  nav ul li a {
+    font-size: 14px; 
+  }
+  header nav ul li:last-child{
+   text-align: center;
+  }
+  div .contacts{
+    margin:auto auto;
+  }
+
+  .title h1 {
+    font-size: 36px; 
+  }
+div .social-media{
+  margin-top: 0;
+
+}
+  .social-media img {
+    width: 36px;
+    height: auto;
+  }
+
+  main p {
+    font-size: 16px; 
+  }
+
+  .main-container {
+    flex-direction: column; 
+  }
+
+  
+
+main{
+  margin-top: 0;
+  padding: 5%;
+}
+.title{
+  margin-top: 0;
+}
+.main-container{
+  margin:5%;
+}
+
+div.block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: fit-content;
+
+}
+
+
+
+.block-info{
+  margin: 0;
+  padding: 5%;
+}
+
+  footer {
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin:0;
+  }
+
+  footer .logo img {
+    margin: 0; /* Уберите отступы для логотипа */
+    width: 100%; /* Сделайте логотип гибким */
+    height: auto; /* Сохраните пропорции */
+  }
+
+  footer nav {
+    margin: 10px 0; 
+   
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; 
+  }
+
+  footer .contacts {
+    margin-top: 10px; /* Уменьшите отступы */
+  }
+
+  footer .social-media {
+    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+  }
 }
