@@ -324,10 +324,15 @@ footer .social-media {
     gap: 15px;
   }
 
-  .main-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  main h1 {
+    font-size: 50px ;
+    margin: 45px auto;
+  }
+
+  .button {
+    width: 95%;
+    padding: 0;
+    margin-bottom: 20px;
   }
 
   .block {
@@ -452,15 +457,6 @@ footer .social-media {
     height: auto;
   }
 
-  main p {
-    font-size: 16px;
-  }
-
-  .main-container {
-    flex-direction: column;
-    margin: 5%;
-  }
-
   .title {
     margin-top: 0;
   }
@@ -487,6 +483,15 @@ footer .social-media {
     height: auto;
   }
 
+  main h1 {
+    font-size: 45px ;
+    margin: 40px auto;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
   .grid {
     flex-direction: column;
     align-items: center;
@@ -499,8 +504,10 @@ footer .social-media {
   }
 
   .button {
-    width: 100%;
-    margin-top: 20px;
+    width: 90%;
+    padding: 0;
+    height: 90px;
+    margin-bottom: 20px;
   }
 
   footer {
@@ -551,6 +558,11 @@ footer .social-media {
     font-size: 174px;
   }
 
+  main h1 {
+    font-size: 40px ;
+    margin: 30px auto;
+  }
+
   main p {
     font-size: 14px;
   }
@@ -569,6 +581,13 @@ footer .social-media {
 
   .block-info h2 {
     font-size: 1.7rem;
+  }
+
+  .button {
+    width: 85%;
+    padding: 0;
+    height: 85px;
+    margin-bottom: 20px;
   }
 
   footer {
