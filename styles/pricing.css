@@ -276,7 +276,6 @@ footer .social-media {
   gap: 11px;
 }
 
-/*медиазапросы*/
 @media (max-width: 1280px) {
   header,
   main,
@@ -342,7 +341,6 @@ footer .social-media {
   .main-container h3 {
     margin-top: 0px;
   }
-
   .pricing-grid {
     max-width: 1350px;
     display: flex;
@@ -538,7 +536,6 @@ footer .social-media {
     font-size: 18px;
   }
 
-  
   div .social-media {
     margin-top: 0;
   }
@@ -566,7 +563,7 @@ footer .social-media {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .pricing-card {
     height: 80%;
     font-size: 1.5rem;
@@ -628,11 +625,11 @@ footer .social-media {
   }
 
   footer .contacts {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
   footer .social-media {
-    flex-direction: row; 
+    flex-direction: row;
   }
 }
 @media (max-width: 480px) {
@@ -723,7 +720,7 @@ footer .social-media {
   }
 
   footer .contacts {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
   footer .social-media {

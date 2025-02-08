@@ -60,6 +60,7 @@ header nav ul li a:last-child {
   font-weight: bold;
   color: #3980ff;
 }
+
 header div.contacts p#phone strong {
   font-size: 20px;
   color: #4386ff;
@@ -224,7 +225,6 @@ footer .social-media {
   gap: 11px;
 }
 
-/* Для планшетов (от 1024px до 1280px) */
 @media (max-width: 1280px) {
   header,
   main,
@@ -236,7 +236,6 @@ footer .social-media {
     height: auto;
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -248,11 +247,11 @@ footer .social-media {
   header nav ul {
     gap: 20px;
   }
-
-  
+  footer {
+    margin: 5%;
+  }
 }
 
-/* Для небольших ноутбуков (от 769px до 1023px) */
 @media (max-width: 1023px) {
   header {
     flex-direction: column;
@@ -315,17 +314,17 @@ footer .social-media {
   }
 
   footer .contacts {
-    margin-top: 10px; /* Уменьшите отступы */
+    margin-top: 10px;
   }
 
   footer .social-media {
-    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+    flex-direction: row;
   }
 }
 @media (max-width: 768px) {
   * {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   header {
@@ -368,6 +367,14 @@ footer .social-media {
   header nav ul li:last-child {
     text-align: center;
   }
+  header .contacts p {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    align-items: start;
+  }
+
   div .contacts {
     margin: auto auto;
   }
@@ -449,15 +456,14 @@ footer .social-media {
   }
 
   footer .contacts {
-    margin-top: 10px; /* Уменьшите отступы */
+    margin-top: 10px;
   }
 
   footer .social-media {
-    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+    flex-direction: row;
   }
 }
 
-/* Для телефонов (до 480px) */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -467,6 +473,11 @@ footer .social-media {
     padding: 10px;
     font-size: 174px;
   }
+
+  header div.contacts p#phone strong {
+    font-size: 18px;
+  }
+
   main p {
     font-size: 14px;
   }
@@ -515,10 +526,10 @@ footer .social-media {
   }
 
   footer .contacts {
-    margin-top: 10px; /* Уменьшите отступы */
+    margin-top: 10px;
   }
 
   footer .social-media {
-    flex-direction: row; /* Измените направление на строку для мобильных устройств */
+    flex-direction: row;
   }
 }

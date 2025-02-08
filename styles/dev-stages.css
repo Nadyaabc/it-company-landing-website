@@ -86,17 +86,14 @@ header .social-media {
   width: 48px;
   height: 48px;
 }
-
+header div.contacts p#phone strong {
+  font-size: 20px;
+  color: #4386ff;
+  color: #4386ff;
+  font-size: 20px;
+  line-height: 150%;
+}
 /*main*/
-/*main {
-  background-color: #3980ff;
-  border-radius: 20px;
-  width: 100%;
-  height: 913px;
-  color: white;
-  max-width: 1733px;
-  text-align: center;
-}*/
 
 main {
   background-color: #3980ff;
@@ -124,15 +121,6 @@ main h3 {
   font-size: 18px;
   font-weight: 300;
 }
-
-/*.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 20px;
-  max-width: 1290px;
-  margin: 0 auto;
-}*/
 
 .grid {
   display: flex;
@@ -211,19 +199,6 @@ main h3 {
   font-size: 15px;
   text-align: left;
 }
-
-/*.button {
-  width: 300px;
-  height: 129px;
-  background-color: #eb5757;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 0;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}*/
 
 .button:hover {
   background-color: #f34141;
@@ -309,6 +284,9 @@ footer .social-media {
   header nav ul {
     gap: 20px;
   }
+  footer {
+    margin: 5%;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -325,7 +303,7 @@ footer .social-media {
   }
 
   main h1 {
-    font-size: 50px ;
+    font-size: 50px;
     margin: 45px auto;
   }
 
@@ -376,7 +354,7 @@ footer .social-media {
 @media (max-width: 768px) {
   * {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   header {
@@ -449,7 +427,7 @@ footer .social-media {
   }
 
   main h1 {
-    font-size: 45px ;
+    font-size: 45px;
     margin: 40px auto;
   }
 
@@ -522,9 +500,11 @@ footer .social-media {
     padding: 10px;
     font-size: 174px;
   }
-
+  header div.contacts p#phone strong {
+    font-size: 18px;
+  }
   main h1 {
-    font-size: 40px ;
+    font-size: 40px;
     margin: 30px auto;
   }
 
