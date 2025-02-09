@@ -64,6 +64,15 @@ header nav ul li a:last-child {
   color: #3980ff;
 }
 
+header .contacts p#phone strong {
+  font-size: 20px;
+  color: #4386ff;
+  line-height: 150%;
+  color: #4386ff;
+  font-size: 20px;
+  line-height: 150%;
+}
+
 header .contacts {
   margin-right: 0px;
   margin-top: 18px;
@@ -451,6 +460,27 @@ footer .social-media {
     gap: 20px;
   }
 
+  .services .content {
+    max-width: 95%;
+  }
+
+  .problem-solving .grid .text {
+    margin-left: 20px;
+  }
+
+  .problem-solving .grid :last-child{
+    margin: 0;
+  }
+
+  .problem-solving .point {
+    margin-right: 10px;
+  }
+
+  .services .content .title p,
+  .problem-solving .grid p {
+    max-width: 95%;
+  }
+
   header nav ul {
     gap: 20px;
   }
@@ -479,13 +509,21 @@ footer .social-media {
     max-width: 95%;
   }
 
-  .introduction .text-box h1 {
-    font-size: 45px;
+  .services .title {
     margin: 0 auto;
   }
 
-  .introduction .text-box p {
-    font-size: 16px;
+  .introduction .text-box h1,
+  .services .content .title h1,
+  .problem-solving .content .title h1 {
+    font-size: 50px;
+    margin: 0 auto;
+  }
+
+  .introduction,
+  .services,
+  .problem-solving {
+    padding: 50px 0;
   }
 
   .introduction .content {
@@ -508,6 +546,46 @@ footer .social-media {
     justify-content: center;
     overflow: hidden;
     max-width: 100%;
+  }
+
+  .services .content .title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .services .content .title p,
+  .problem-solving .grid p {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  .problem-solving .content {
+    padding: 0;
+    gap: 30px;
+  }
+
+  .problem-solving .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .problem-solving .grid .text-box {
+    margin-bottom: 40px;
+  }
+
+  .problem-solving .text :last-child{
+    margin-bottom: 0;
+  }
+
+  .problem-solving img {
+    margin-top: 20px;
   }
 
   footer {
@@ -623,23 +701,23 @@ footer .social-media {
     height: auto;
   }
 
+  .introduction,
+  .services,
+  .problem-solving {
+    padding: 40px 0;
+  }
+
   .introduction .text-box {
     margin: 0 auto;
     padding: 0;
   }
 
-  .introduction .icons-text {
-    margin: 39px auto;
-    max-width: 95%;
-  }
-
-  .introduction .text-box h1 {
+  .introduction .text-box h1,
+  .services .content .title h1,
+  .problem-solving .content .title h1 {
     font-size: 45px;
     margin: 0 auto;
-  }
-
-  .introduction .text-box p {
-    font-size: 16px;
+    text-align: center;
   }
 
   .introduction .content {
@@ -664,6 +742,12 @@ footer .social-media {
 
   .introduction .picture img {
     margin: 0 auto;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   footer {
@@ -711,98 +795,19 @@ footer .social-media {
 
   header {
     padding: 10px;
-    font-size: 174px;
   }
 
-  .introduction .text-box {
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .introduction .icons-text {
-    margin: 39px auto;
-    max-width: 95%;
-  }
-
-  .introduction .text-box h1 {
-    font-size: 45px;
-    margin: 0 auto;
+  .introduction .text-box h1,
+  .services .content .title h1,
+  .problem-solving .content .title h1 {
+    font-size: 40px;
   }
 
   .introduction .text-box p {
     font-size: 16px;
   }
 
-  .introduction .content {
-    display: flex;
-    flex-direction: column;
-    max-height: fit-content;
-    gap: 20px;
-  }
-
-  .introduction .button {
-    width: 90%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  .introduction .picture {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .services .content .title {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .services .content .title h1 {
-    font-size: 45px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .services .content .title p {
-    font-size: 16px;
-    margin: 0 auto;
-  }
-
   footer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin: 0;
-  }
-
-  footer .logo img {
-    margin: 0;
-    width: auto;
-    height: 52px;
-  }
-
-  footer nav {
-    margin: 10px 0;
-  }
-
-  footer nav ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-  }
-
-  footer .contacts {
-    margin-top: 10px;
-  }
-
-  footer .social-media {
-    flex-direction: row;
   }
 }
