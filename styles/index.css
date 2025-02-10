@@ -797,6 +797,10 @@ footer .social-media {
     padding: 10px;
   }
 
+  header div.contacts p#phone strong {
+    font-size: 18px;
+  }
+
   .introduction .text-box h1,
   .services .content .title h1,
   .problem-solving .content .title h1 {
