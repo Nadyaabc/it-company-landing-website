@@ -59,7 +59,7 @@ header nav ul li a:last-child {
   margin-right: 0;
 }
 
-#current-page {
+#current-page, #current-page-footer {
   font-weight: bold;
   color: #3980ff;
 }
@@ -238,7 +238,6 @@ main {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: auto auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   padding-top: 36px;
@@ -330,7 +329,8 @@ main {
 }
 
 .problem-solving .grid .mobile-phone {
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .text:first-child {

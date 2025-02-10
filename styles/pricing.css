@@ -56,7 +56,7 @@ nav ul li a:last-child {
   margin-right: 0;
 }
 
-#current-page {
+#current-page, #current-page-footer {
   font-weight: bold;
   color: #3980ff;
 }
@@ -137,7 +137,6 @@ header .social-media {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: auto auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
@@ -201,6 +200,7 @@ h2.cost {
 }
 
 .order {
+  display: block;
   background-color: white;
   color: #3980ff;
   border: 1px solid #3980ff;
@@ -212,9 +212,23 @@ h2.cost {
   height: 73px;
   width: 278px;
   margin-bottom: 0;
-  padding: auto;
-  box-sizing: content-box;
   align-self: center;
+  text-decoration: none;
+  justify-content: center;
+}
+a.order{
+  
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  
+}
+a.order p{
+  align-self: center;
+
+}
+a:visited{
+  text-decoration: none;
 }
 
 .order:hover {
@@ -360,7 +374,6 @@ footer .social-media {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: auto auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
@@ -435,7 +448,6 @@ footer .social-media {
     height: 73px;
     width: 278px;
     margin-bottom: 0;
-    padding: auto;
     box-sizing: content-box;
     align-self: center;
   }
@@ -590,10 +602,16 @@ footer .social-media {
   h2.cost {
     margin-top: 5%;
   }
-  button.order {
+  button.order{
     width: 80%;
     margin: 5%;
   }
+  .order {
+    text-decoration: none;
+  color: inherit;
+  }
+
+
 
   footer {
     display: flex;

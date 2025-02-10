@@ -58,11 +58,11 @@ nav ul li a:last-child {
   margin-right: 0;
 }
 
-#current-page {
+#current-page, #current-page-footer {
   font-weight: bold;
   color: #3980ff;
 }
-header div.contacts p#phone strong {
+header div.contacts p#phone strong  {
   font-size: 20px;
   color: #4386ff;
   line-height: 150%;
@@ -114,7 +114,6 @@ header .social-media {
 }
 .main-container h1 {
   font-size: 55px;
-  font-weight: 300px;
   padding: 0;
   margin: 0;
   line-height: normal;
@@ -202,13 +201,12 @@ textarea {
   resize: none;
 }
 
-button {
+button  {
   margin-top: 9px;
   background-color: #3980ff;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: auto auto;
   cursor: pointer;
   font-size: 17px;
   width: 320px;
@@ -218,12 +216,12 @@ input[type="text"]:hover,
 textarea:hover,
 input[type="text"]:focus-within,
 textarea:focus {
-  border: 3px solid #3980ff; /* Цвет рамки при наведении */
+  border: 3px solid #3980ff; 
   color: #000;
   font-weight: 300;
 }
 
-button:hover {
+button input:hover {
   background-color: #0056b3;
 }
 
@@ -320,7 +318,7 @@ footer .social-media {
   .form-group {
     width: 100%;
   }
-  button {
+  button input {
     width: 100%;
   }
 
