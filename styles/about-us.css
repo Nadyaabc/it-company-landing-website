@@ -112,14 +112,11 @@ main {
 }
 .title {
   margin-top: 24px;
-  padding-top: auto;
-  padding-bottom: auto;
   padding-left: 0;
 }
 
 .title h1 {
   font-size: 55px;
-  font-weight: 300px;
   margin: 0;
 }
 main {
@@ -155,7 +152,6 @@ main p {
 .block-info {
   color: white;
   font-size: 22px;
-  font-weight: 600px;
   padding: 33px;
   height: auto;
 }
