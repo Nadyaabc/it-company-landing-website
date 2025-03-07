@@ -1,5 +1,5 @@
 * {
-  font-family: Open Sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -165,8 +165,8 @@ header .social-media {
 }
 
 .box:hover {
-  background-color: #3980ff; /* Цвет выделенного блока */
-  color: white; /* Цвет текста выделенного блока */
+  background-color: #3980ff; 
+  color: white; 
 }
 
 /*контакты*/

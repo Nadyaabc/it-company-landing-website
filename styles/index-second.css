@@ -1,0 +1,171 @@
+/* Основные стили для карусели */
+.service-grid {
+  position: relative;
+  width: 100%;
+  max-width: 1410px;
+  margin: 0 auto;
+  margin-top:40px;
+}
+
+.carousel-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-card {
+   flex: 1 1 auto; /* Позволяет карточкам подстраиваться */
+  min-width: 200px; /* Минимальная ширина */
+  max-width: 100%; /* Карточка занимает всю доступную ширину */
+  height: auto;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Индикаторы */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.indicator {
+  width: 30px;
+  height: 3px;
+  background: gray;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.indicator.active {
+  width: 50px;
+  background: #007BFF;
+}
+
+.carousel-outer {
+  position: relative;
+  width: 100%;
+  
+}
+
+.carousel-wrapper {
+  width: 100%;
+}
+
+
+.carousel-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Стили для стрелок */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Смещаем стрелки за пределы контейнера */
+.prev {
+  left: -70px; /* Увеличил отступ влево */
+}
+
+.next {
+  right: -70px; /* Увеличил отступ вправо */
+}
+
+
+.carousel-wrapper {
+  overflow: hidden;
+  height: 340px;
+
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 30px;
+  width: max-content;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Выносим кнопки подальше */
+.prev {
+  left: -80px;
+}
+
+.next {
+  right: -80px;
+}
+.carousel-button:disabled {
+  background: #6c757d; /* Серый цвет */
+  cursor: not-allowed; /* Изменение курсора */
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .carousel-button {
+    display: none; /* Полностью скрываем кнопки */
+  }
+}
