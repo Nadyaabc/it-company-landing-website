@@ -6,128 +6,18 @@
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/app-order.css" />
     <link rel="stylesheet" href="../assets/fonts/open-sans/" />
+
+    <title>Заказать приложение</title>
     <style>
-      /* Скрываем чекбокс */
-      #menu__toggle {
-        opacity: 0;
-        position: absolute;
-      }
-
-      /* Кнопка-бургер */
-      .menu__btn {
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        z-index: 100;
-      }
-
-      /* Добавляем линии бургер-меню */
-      .menu__btn > span,
-      .menu__btn > span::before,
-      .menu__btn > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background-color: #333;
-        transition-duration: 0.25s;
-      }
-
-      .menu__btn > span::before {
-        content: "";
-        top: -8px;
-      }
-
-      .menu__btn > span::after {
-        content: "";
-        top: 8px;
-      }
-
-      /* Контейнер меню */
-      .menu__box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        background-color: #eceff1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-        transition: left 0.3s ease-in-out, visibility 0.3s;
-        z-index: 99;
-      }
-
-      /* Элементы меню */
-      .menu__item {
-        display: block;
-        padding: 15px 20px;
-        color: #333;
-        font-size: 20px;
-        text-decoration: none;
-      }
-
-      .menu__item:hover {
-        background-color: #cfd8dc;
-      }
-
-      /* Когда чекбокс активен, показываем меню */
-      #menu__toggle:checked ~ .menu__box {
-        visibility: visible;
-        left: 0;
-      }
-
-      /* Анимация кнопки при открытии меню */
-      #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
-      }
-
-      #menu__toggle:checked ~ .menu__btn > span::before {
-        top: 0;
-        transform: rotate(0);
-      }
-
-      #menu__toggle:checked ~ .menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-      }
-      /* По умолчанию скрываем бургер-меню на больших экранах */
-      .menu__btn,
-      #menu__toggle,
-      .menu__box {
+      .error {
+        color: red;
+        font-size: 14px;
         display: none;
       }
-
-      /* Показываем бургер-меню только на экранах 1023px и меньше */
-      @media screen and (max-width: 1023px) {
-        /* Отображаем кнопку-бургер */
-        .menu__btn {
-          display: flex;
-        }
-        /* Скрываем обычное меню */
-  .nav-menu {
-    display: none;
-  }
-
-        /* Отображаем меню, но скрываем его (будет показываться при клике) */
-        .menu__box {
-          display: block;
-        }
-
-        /* Делаем чекбокс активным, чтобы работало переключение */
-        #menu__toggle {
-          display: block;
-        }
+      .selected {
+        border: 2px solid blue;
       }
     </style>
-    <title>Заказать приложение</title>
   </head>
   <body>
     <div class="container">
@@ -135,41 +25,9 @@
         <div class="logo">
           <img src="../assets/images/svg/logo.svg" alt="logo" />
         </div>
-        <!-- Чекбокс для управления меню -->
-
-        <!-- Чекбокс -->
-        <input type="checkbox" id="menu__toggle" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-
-        <!-- Меню -->
-        <nav class="menu__box">
-          <ul>
-            <li><a class="menu__item" href="../index.html">Главная</a></li>
-            <li>
-              <a class="menu__item" href="../pages/about-us.html">О нас</a>
-            </li>
-            <li>
-              <a class="menu__item" href="../pages/dev-stages.html"
-                >Этапы работы</a
-              >
-            </li>
-            <li>
-              <a class="menu__item" href="../pages/pricing.html">Стоимость</a>
-            </li>
-            <li>
-              <a class="menu__item" href="#" id="current-page"
-                >Заказать приложение</a
-              >
-            </li>
-          </ul>
-        </nav>
-        
         <nav>
           <ul class="nav-menu">
             <li><a href="../index.html">Главная</a></li>
-
             <li><a href="../pages/about-us.html">О нас</a></li>
             <li><a href="../pages/dev-stages.html">Этапы работы</a></li>
             <li><a href="../pages/pricing.html">Стоимость</a></li>
@@ -197,7 +55,7 @@
           <div class="main-content">
             <section class="budget">
               <h2>Бюджет проекта:</h2>
-              <div class="budget-grid">
+              <div class="budget-grid" id="budgetGrid">
                 <div class="box">
                   <p>680 - 1 700 BYN</p>
                 </div>
@@ -207,21 +65,35 @@
                 <div class="box"><p>34 000 - 68 000 BYN</p></div>
                 <div class="box"><p>68 000 - 100 000 BYN</p></div>
               </div>
+              <p class="error" id="budgetError">Выберите бюджет</p>
             </section>
             <section class="contact-data">
               <h2>Контакты:</h2>
-              <div class="form-container">
+              <form id="orderForm" class="form-container">
                 <div class="form-group">
-                  <input type="text" placeholder="Имя" required />
+                  <input type="text" id="name" placeholder="Имя" required />
+                  <p class="error" id="nameError">Введите имя</p>
                 </div>
                 <div class="form-group">
-                  <input type="text" placeholder="Телефон" required />
+                  <input
+                    type="text"
+                    name="phone"
+                    id="userPhone"
+                    placeholder="+375 (00) 000-00-00"
+                    required
+                  />
+                  <p class="error" id="phoneError">Введите корректный номер</p>
                 </div>
                 <div class="form-group">
-                  <textarea placeholder="Комментарий" required></textarea>
+                  <textarea
+                    id="comment"
+                    placeholder="Комментарий"
+                    required
+                  ></textarea>
+                  <p class="error" id="commentError">Введите комментарий</p>
                 </div>
-                <button>Заказать обратный звонок</button>
-              </div>
+                <button type="submit">Заказать обратный звонок</button>
+              </form>
             </section>
           </div>
         </div>
@@ -261,6 +133,75 @@
           </div>
         </div>
       </footer>
+      <script>
+        document
+          .getElementById("orderForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            let isValid = true;
+            let budgetSelected = document.querySelector(
+              ".budget-grid .selected"
+            );
+
+            const name = document.getElementById("name");
+            const phone = document.getElementById("userPhone");
+            const comment = document.getElementById("comment");
+
+            const nameError = document.getElementById("nameError");
+            const phoneError = document.getElementById("phoneError");
+            const commentError = document.getElementById("commentError");
+            const budgetError = document.getElementById("budgetError");
+
+            // Проверка на заполненность имени
+            nameError.style.display = name.value.trim() ? "none" : "block";
+
+            // Проверка на заполненность телефона с учётом длины маски
+            const isPhoneFilled =
+              phone.value.replace(/\s/g, "").replace(/_/g, "").length === 17; // Длина: +375441118722
+            console.log(phone.value.replace(/\s/g, "").replace(/_/g, ""));
+            phoneError.style.display = isPhoneFilled ? "none" : "block";
+
+            // Проверка на заполненность комментария
+            commentError.style.display = comment.value.trim()
+              ? "none"
+              : "block";
+
+            // Проверка на выбор бюджета
+            budgetError.style.display = budgetSelected ? "none" : "block";
+
+            // Условие для успешной валидации
+            isValid =
+              name.value.trim() &&
+              isPhoneFilled &&
+              comment.value.trim() &&
+              budgetSelected;
+
+            if (isValid) {
+              alert("Форма успешно отправлена!");
+              this.reset();
+              budgetSelected.classList.remove("selected");
+            }
+          });
+
+        document.querySelectorAll(".budget-grid .box").forEach((box) => {
+          box.addEventListener("click", function () {
+            document
+              .querySelectorAll(".budget-grid .box")
+              .forEach((b) => b.classList.remove("selected"));
+            this.classList.add("selected");
+          });
+        });
+      </script>
+
+      <script src="https://unpkg.com/imask"></script>
+
+      <script>
+        var phoneInput = document.getElementById("userPhone");
+        var mask = new IMask(phoneInput, {
+          mask: "+375 (00) 000-00-00",
+          lazy: false,
+        });
+      </script>
     </div>
   </body>
 </html>

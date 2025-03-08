@@ -3,20 +3,16 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-// Константы
-let cardWidth = 410; // Ширина одной карточки
-const gap = 30; // Расстояние между карточками
-let visibleSlides = 3; // Количество видимых слайдов
+let cardWidth = 410; 
+const gap = 30; 
+let visibleSlides = 3; 
 let index = 0;
 
-// Получаем общее количество слайдов
 const totalSlides = document.querySelectorAll('.service-card').length;
 console.log("total slides " + totalSlides);
-// Максимальный индекс для карусели
 let maxIndex = Math.max(0, totalSlides - visibleSlides);
 console.log("maxindex " + maxIndex);
 
-// Функция обновления адаптивности
 function updateCardWidth() {
     const screenWidth = window.innerWidth;
     
@@ -39,7 +35,7 @@ function updateCardWidth() {
 
     maxIndex = Math.max(0, totalSlides - visibleSlides);
     document.querySelectorAll('.service-card').forEach(card => {
-        card.style.width = `${cardWidth}px`; // Устанавливаем ширину
+        card.style.width = `${cardWidth}px`; 
     });
 
     const carouselWrapper = document.querySelector('.carousel-wrapper');
@@ -49,8 +45,6 @@ function updateCardWidth() {
     createIndicators();
 }
 
-
-// Обновление размеров кнопок при изменении экрана
 function updateButtonSize(screenWidth) {
     let buttonSize = 50;
     if (screenWidth <= 768) {
@@ -64,7 +58,6 @@ function updateButtonSize(screenWidth) {
     nextButton.style.height = `${buttonSize}px`;
 }
 
-// Обновление карусели
 function updateCarousel() {
     const offset = -(index * (cardWidth + gap));
     carousel.style.transform = `translateX(${offset}px)`;
@@ -72,7 +65,6 @@ function updateCarousel() {
     updateButtons();
 }
 
-// Переключение на следующий слайд
 function nextSlide() {
     if (index < maxIndex) {
         index += 1;
@@ -82,7 +74,6 @@ function nextSlide() {
     updateCarousel();
 }
 
-// Переключение на предыдущий слайд
 function prevSlide() {
     if (index > 0) {
         index -= 1;
@@ -92,14 +83,12 @@ function prevSlide() {
     updateCarousel();
 }
 
-// Обновление индикаторов
 function updateIndicators() {
     document.querySelectorAll('.indicator').forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
 }
 
-// Обновление состояния кнопок
 function updateButtons() {
     prevButton.disabled = index === 0;
     nextButton.disabled = index === maxIndex;
@@ -117,7 +106,6 @@ function updateButtons() {
     }
 }
 
-// Создание индикаторов
 function createIndicators() {
     indicatorsContainer.innerHTML = '';
     for (let i = 0; i <= maxIndex; i++) {
@@ -138,10 +126,6 @@ nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 window.addEventListener('resize', updateCardWidth);
 
+setInterval(nextSlide,5000);
 updateCardWidth();
 createIndicators();
-
-
-
-
-//setInterval(nextSlide, 3000);

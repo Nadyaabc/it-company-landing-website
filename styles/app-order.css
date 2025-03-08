@@ -164,7 +164,7 @@ header .social-media {
   font-weight: bold;
 }
 
-.box:hover {
+.box:hover, .box.selected {
   background-color: #3980ff; 
   color: white; 
 }

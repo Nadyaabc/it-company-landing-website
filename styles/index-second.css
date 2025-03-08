@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1410px;
   margin: 0 auto;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .carousel-outer {
@@ -20,15 +20,14 @@
 }
 
 .service-card {
-   flex: 1 1 auto; /* Позволяет карточкам подстраиваться */
-  min-width: 200px; /* Минимальная ширина */
-  max-width: 100%; /* Карточка занимает всю доступную ширину */
+  flex: 1 1 auto;
+  min-width: 200px;
+  max-width: 100%;
   height: auto;
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Индикаторы */
 .carousel-indicators {
@@ -48,19 +47,17 @@
 
 .indicator.active {
   width: 50px;
-  background: #007BFF;
+  background: #007bff;
 }
 
 .carousel-outer {
   position: relative;
   width: 100%;
-  
 }
 
 .carousel-wrapper {
   width: 100%;
 }
-
 
 .carousel-outer {
   position: relative;
@@ -74,7 +71,6 @@
   overflow: hidden;
 }
 
-/* Стили для стрелок */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -82,7 +78,7 @@
   z-index: 10;
   width: 50px;
   height: 50px;
-  background: #007BFF;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 50%;
@@ -92,20 +88,17 @@
   justify-content: center;
 }
 
-/* Смещаем стрелки за пределы контейнера */
 .prev {
-  left: -70px; /* Увеличил отступ влево */
+  left: -70px;
 }
 
 .next {
-  right: -70px; /* Увеличил отступ вправо */
+  right: -70px;
 }
-
 
 .carousel-wrapper {
   overflow: hidden;
   height: 340px;
-
 }
 
 .carousel {
@@ -122,7 +115,7 @@
   z-index: 100;
   width: 50px;
   height: 50px;
-  background: #007BFF;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 50%;
@@ -132,7 +125,6 @@
   justify-content: center;
 }
 
-/* Выносим кнопки подальше */
 .prev {
   left: -80px;
 }
@@ -141,8 +133,8 @@
   right: -80px;
 }
 .carousel-button:disabled {
-  background: #6c757d; /* Серый цвет */
-  cursor: not-allowed; /* Изменение курсора */
+  background: #6c757d;
+  cursor: not-allowed;
 }
 
 .carousel-container {
@@ -166,6 +158,6 @@
 
 @media (max-width: 768px) {
   .carousel-button {
-    display: none; /* Полностью скрываем кнопки */
+    display: none;
   }
 }

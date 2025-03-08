@@ -1,8 +1,7 @@
-
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -57,11 +56,11 @@ header nav ul li a:last-child {
   margin-right: 0;
 }
 
-#current-page,#current-page-footer {
+#current-page,
+#current-page-footer {
   font-weight: bold;
   color: #3980ff;
 }
-
 
 header div.contacts p#phone strong {
   font-size: 20px;
