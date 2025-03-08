@@ -111,8 +111,9 @@ main {
   width: 100%;
   margin-top: 0;
 }
+
 .title {
-  margin-top: 24px;
+  margin-top: 60px;
   padding-left: 0;
 }
 
@@ -120,9 +121,7 @@ main {
   font-size: 55px;
   margin: 0;
 }
-main {
-  margin-top: 36px;
-}
+
 main p {
   margin-top: 30px;
   font-size: 20px;
@@ -168,6 +167,38 @@ main p {
   letter-spacing: 0;
   margin-top: 50px;
 }
+
+.photos {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photos img {
+  width: 100%;
+  height: auto;
+  border: 7px solid white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.photos figure {
+  text-align: center;
+  width: 40%;
+  max-width: 740px;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 20px;
+  padding-left: 0;
+  line-height: 150%;
+}
+
 footer {
   max-width: 1175px;
   display: flex;
@@ -281,6 +312,10 @@ footer .social-media {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
+  .photos figure {
+    width: 100%;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -318,6 +353,7 @@ footer .social-media {
     flex-direction: row;
   }
 }
+
 @media (max-width: 768px) {
   * {
     box-sizing: border-box;
@@ -333,6 +369,7 @@ footer .social-media {
     align-items: center;
     height: auto;
   }
+
   .contacts {
     margin: 10px auto;
   }
@@ -358,12 +395,15 @@ footer .social-media {
     align-items: center;
     gap: 10px;
   }
+
   nav ul li a {
     font-size: 14px;
   }
+
   header nav ul li:last-child {
     text-align: center;
   }
+
   header .contacts p {
     display: flex;
     flex-direction: column;
@@ -375,6 +415,7 @@ footer .social-media {
   div .contacts {
     margin: auto auto;
   }
+
   #phone {
     font-size: 18px;
   }
@@ -382,15 +423,17 @@ footer .social-media {
   .title h1 {
     font-size: 36px;
   }
+
   div .social-media {
     margin-top: 0;
   }
+
   .social-media img {
     width: 36px;
     height: auto;
   }
 
-  main p {
+  main p, figcaption {
     font-size: 16px;
   }
 
@@ -403,6 +446,7 @@ footer .social-media {
     margin-top: 0;
     padding: 5%;
   }
+
   .title {
     margin-top: 0;
   }
@@ -420,9 +464,19 @@ footer .social-media {
     margin: 0;
     padding: 5%;
   }
+
   .block-info p {
     margin-top: 5%;
   }
+
+  .photos figure {
+    width: 100%;
+  }
+
+  .photos {
+    margin-top: 30px;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -475,9 +529,10 @@ footer .social-media {
     font-size: 18px;
   }
 
-  main p {
+  main p, figcaption {
     font-size: 14px;
   }
+
   .title h1 {
     font-size: 28px;
   }
