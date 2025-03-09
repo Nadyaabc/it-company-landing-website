@@ -90,6 +90,12 @@ function openImageViewer(img) {
         viewer.remove();
     });
 
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            viewer.remove();
+        }
+    });
+
     imgClone.addEventListener("wheel", (event) => {
         zoomImage(event, imgClone);
     });
