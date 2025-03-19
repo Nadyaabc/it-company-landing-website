@@ -3,9 +3,9 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-let cardWidth = 410; 
-const gap = 30; 
-let visibleSlides = 3; 
+let cardWidth = 410;
+const gap = 30;
+let visibleSlides = 3;
 let index = 0;
 
 const totalSlides = document.querySelectorAll('.service-card').length;
@@ -15,7 +15,7 @@ console.log("maxindex " + maxIndex);
 
 function updateCardWidth() {
     const screenWidth = window.innerWidth;
-    
+
     if (screenWidth <= 480) {
         cardWidth = screenWidth-10; // Адаптивная ширина
         visibleSlides = 1;
@@ -35,7 +35,7 @@ function updateCardWidth() {
 
     maxIndex = Math.max(0, totalSlides - visibleSlides);
     document.querySelectorAll('.service-card').forEach(card => {
-        card.style.width = `${cardWidth}px`; 
+        card.style.width = `${cardWidth}px`;
     });
 
     const carouselWrapper = document.querySelector('.carousel-wrapper');
@@ -65,6 +65,13 @@ function updateCarousel() {
     updateButtons();
 }
 
+let timer;
+
+function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 5000);
+}
+
 function nextSlide() {
     if (index < maxIndex) {
         index += 1;
@@ -72,6 +79,7 @@ function nextSlide() {
         index = 0;
     }
     updateCarousel();
+    resetTimer();
 }
 
 function prevSlide() {
@@ -81,6 +89,7 @@ function prevSlide() {
         index = maxIndex;
     }
     updateCarousel();
+    resetTimer();
 }
 
 function updateIndicators() {
@@ -90,8 +99,8 @@ function updateIndicators() {
 }
 
 function updateButtons() {
-    prevButton.disabled = index === 0;
-    nextButton.disabled = index === maxIndex;
+    /*prevButton.disabled = index === 0;
+    nextButton.disabled = index === maxIndex;*/
 
     if (prevButton.disabled) {
         prevButton.classList.add('disabled');
@@ -115,17 +124,17 @@ function createIndicators() {
         dot.addEventListener('click', () => {
             index = i;
             updateCarousel();
+            resetTimer();
         });
         indicatorsContainer.appendChild(dot);
     }
     updateIndicators();
 }
 
-// Инициализация
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 window.addEventListener('resize', updateCardWidth);
 
-setInterval(nextSlide,5000);
+resetTimer();
 updateCardWidth();
 createIndicators();
